@@ -49,11 +49,20 @@
 #define HIGH 1
 #define LOW 0
 
+//error handling
+typedef enum EN_Dio_error{
+	OK=0,
+	Dio_init_error,
+    Dio_read_error,
+    Dio_write_error,
+	Dio_toggle_error,
+	}EN_Dio_error;
+
 // Functions prototypes
-void Dio_init(uint8_t portNumber, uint8_t pinNumber, uint8_t direction);
-void Dio_write(uint8_t portNumber, uint8_t pinNumber, uint8_t value);
-void Dio_toggle(uint8_t portNumber, uint8_t pinNumber);
-void Dio_read(uint8_t portNumber, uint8_t pinNumber, uint8_t *value);
+ EN_Dio_error Dio_init(uint8_t portNumber, uint8_t pinNumber, uint8_t direction);
+ EN_Dio_error Dio_write(uint8_t portNumber, uint8_t pinNumber, uint8_t value);
+ EN_Dio_error Dio_toggle(uint8_t portNumber, uint8_t pinNumber);
+ EN_Dio_error Dio_read(uint8_t portNumber, uint8_t pinNumber, uint8_t *value);
 
 
 

@@ -1,0 +1,13 @@
+done:
+1.editing the pins of LED as mentioned in  rubric 
+2.the video discussing the pdf 
+3.adding skeleton to App.C file
+4.test modules
+
+
+
+
+
+we asked in webinar that the following are optional :
+1. error handling
+2.long and more than short pressed are treated as a one short pressed
